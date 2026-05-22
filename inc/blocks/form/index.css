@@ -1,0 +1,42 @@
+.request-form> :not(:last-child) {
+  margin-bottom: 1rem;
+}
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5dc;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5dc;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+.form-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  border-width: 0px;
+  font-size: 1rem;
+  color: white;
+  background-color: #1447e6;
+  cursor: pointer;
+}
+.success {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: green;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "acf/teacher-list-top",
+    "title": "Teacher List Top",
+    "description": "Teacher List Top",
+    "style": [ "file:./index.css" ],
+    "category": "theme",
+    "icon": "admin-users",
+    "keywords": ["teacher"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

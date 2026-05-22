@@ -1,0 +1,14 @@
+{
+    "name": "acf/form",
+    "title": "Form",
+    "description": "Request submission form",
+    "style": [ "file:./index.css" ],
+    "viewScript": [ "file:./index.js", "form-script" ],
+    "category": "theme",
+    "icon": "feedback",
+    "keywords": ["form"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    }
+}

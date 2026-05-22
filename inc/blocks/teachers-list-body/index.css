@@ -1,0 +1,44 @@
+.teacher_category {
+    border-radius: 50%;
+    color: oklch(0.488 0.243 264.376);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0 0 16px 0!important;
+    padding: 4px 12px;
+    background-color: oklch(0.97 0.014 254.604)
+}
+.teacher_description {
+    color: oklch(0.446 0.03 256.802) !important;
+    font-size: 14px !important;
+    line-height: 22.75px !important;
+    margin: 0 0 24px 0 !important;
+    padding: 0px;
+}
+.teacher_skills {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: c;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.text-gray-600 {
+    color: oklch(0.145 0 0);
+}
+.text-gray-900 {
+    color: oklch(0.21 0.034 264.665);
+}
+.font-medium {
+    font-weight: 500
+}
+.m-12 {
+    margin-bottom: 12px;
+}

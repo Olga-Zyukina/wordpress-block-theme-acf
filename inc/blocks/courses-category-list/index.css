@@ -1,0 +1,21 @@
+.categories-list {
+	list-style-type: none !important;
+	display: flex;
+	gap: 0.25rem;
+	padding: 0;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+.categories-list li {
+	padding: 8px 16px;
+	background-color: #f3f4f6;
+	color: #364153;
+	border-radius: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+}
+.categories-list .active {
+	background-color: #1447e6;
+	color: #f3f4f6;
+}

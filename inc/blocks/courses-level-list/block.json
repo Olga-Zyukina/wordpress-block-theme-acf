@@ -1,0 +1,16 @@
+{
+    "name": "acf/courses-level-list",
+    "title": "Courses level list",
+    "description": "Courses level list",
+    "style": [ "file:./index.css" ],
+    "category": "theme",
+    "icon": "list-view",
+    "keywords": ["list"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

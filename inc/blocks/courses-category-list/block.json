@@ -1,0 +1,16 @@
+{
+    "name": "acf/courses-category-list",
+    "title": "Courses Category List",
+    "description": "Courses category list",
+    "style": [ "file:./index.css" ],
+    "category": "theme",
+    "icon": "list-view",
+    "keywords": ["list"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

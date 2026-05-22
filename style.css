@@ -1,0 +1,96 @@
+/*
+Theme Name: EduLearn
+Author: OZ
+Description: Online education platform for learning languages and professional skills.
+Requires at least: 6.9
+Version: 1.0.0
+Text Domain: edu-learn
+Tags: education, blog, portfolio, block-patterns, block-styles, editor-style, one-column, two-columns, three-columns
+*/
+html,
+body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+.no-margin-top {
+	margin-top: 0 !important;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.position-relative {
+	position: relative;
+}
+/* Blocks style */
+.wp-site-blocks>.wp-block-group {
+	margin-block-start: 0;
+}
+.wp-site-blocks>* {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+.wp-block-columns {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+.wp-block-cover {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+.wp-block-cover .wp-block-cover__background {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.wp-block-site-title {
+	cursor: pointer;
+}
+@media (max-width: 767px) {
+  .wp-block-navigation__responsive-container {
+    display: none!important;
+  }
+	.wp-block-navigation__responsive-container.is-menu-open {
+    display: block!important;
+  }
+  .wp-block-navigation__responsive-container-open {
+    display: block!important;
+  }
+}
+/* Front-page */
+.hero-layout {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+@media (max-width: 767px) {
+.hero-layout {
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0;
+}
+}
+.hero-info::before {
+	content: "";
+	position: absolute;
+	top: 1rem;
+	left: 0.8rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #00c950;
+	border-radius: 50%;
+}
+/* Teacher Page */
+@media (max-width: 767px) {
+	.teacher-list {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}

@@ -1,0 +1,16 @@
+.teachers-list-top {
+    display: flex;
+}
+.teachers-details {
+    display: flex;
+    flex-direction: column;
+}
+.teachers-details p {
+    margin: 0;
+}
+.text-yellow {
+    color: yellow;
+}
+.fill-yellow {
+    fill: yellow;
+}
