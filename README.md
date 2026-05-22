@@ -1,5 +1,5 @@
 # WordPress Block Theme
-WordPress Block Theme + Vue 3 Calculator
+WordPress Block Theme + ACF
 Edu Learn – demo site for  **ACF and WordPress**.
 The website synchronizes the submission of requests to the Hollihop CRM using the Hollihop 2.0 API.
 ![WordPress Logo](https://upload.wikimedia.org/wikipedia/commons/2/20/WordPress_logo.svg)
@@ -9,10 +9,10 @@ The website synchronizes the submission of requests to the Hollihop CRM using th
 - Block Theme
 - Multi-page website
 - Front-Page
-- Page Courses
+- Page Courses        - Filter courses using ajax requests
 - Page Teachers
 - Page Pricing 
-- Page Request 
+- Page Request        - Sending requests to CRM Hollihop
 - Adaptive design
 
 ## Technologies used
@@ -74,4 +74,4 @@ Import WordPress pages using the WordPress import tool and the file /data-imoprt
 Set up the menu and select the website logo.
 
 
-<div><img src="https://github.com/Olga-Zyukina/wordpress-block-theme-acf/blob/master/screenshot.png" title="wordpress-block-theme-acf" alt="wordpress-block-theme-acf"/></div>
+<div><img src="https://github.com/Olga-Zyukina/wordpress-block-theme-acf/blob/master/Frontpage.png" title="wordpress-block-theme-acf" alt="wordpress-block-theme-acf"/></div>
