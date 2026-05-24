@@ -17,6 +17,7 @@ The website synchronizes the submission of requests to the Hollihop CRM using th
 
 ## Technologies used
 
+-  [Figma Make](https://www.figma.com/make/YRfgCnC3zbzryCHgaKzfnR/Adaptive-multipage-website-design?p=f&t=V2wKA8EmDBVlrn0u-0) (creating a website prototype )
 -  CMS WordPress
 -  HTML
 -  CSS3
