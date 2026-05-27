@@ -52,7 +52,7 @@ function edu_learn_filter_scripts() {
 		wp_enqueue_script('constants', get_template_directory_uri() . '/assets/js/constants.js', null, null, true );
 	}
 	if ( is_page_template ('page-all-courses') ) {
-    wp_enqueue_script( 'courses', get_template_directory_uri() . '/assets/js/courses.js', array( 'jquery' ), '', true);
+    wp_enqueue_script( 'courses', get_template_directory_uri() . '/assets/js/courses.js', null, null, true);
     wp_localize_script( 'courses', 'ajax',
       array(
         'url' => admin_url('admin-ajax.php'),
