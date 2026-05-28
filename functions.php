@@ -48,9 +48,6 @@ function edu_learn_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'edu_learn_enqueue_styles' );
 
 function edu_learn_filter_scripts() {
-	if ( is_page_template ('page-request') ) {
-		wp_enqueue_script('constants', get_template_directory_uri() . '/assets/js/constants.js', null, null, true );
-	}
 	if ( is_page_template ('page-all-courses') ) {
     wp_enqueue_script( 'courses', get_template_directory_uri() . '/assets/js/courses.js', null, null, true);
     wp_add_inline_script( 'courses', 'const ajax = ' . json_encode(

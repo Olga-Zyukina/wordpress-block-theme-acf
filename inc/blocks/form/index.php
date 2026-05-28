@@ -1,9 +1,40 @@
 <?php
 /**
- * Testimonial Block template.
+ * Request Form Block.
  *
  * @param array $block The block settings and attributes.
  */
+
+if ( !defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
+require_once(ABSPATH . 'hollihop-data.php');
+$api_url = getenv('HOLLIHOP_URL_STUDY_REQUEST') ?: 'Missing API key';
+
+if (!empty($_POST)) {
+  $postArray = [
+    "fullName" => strip_tags($_POST['fullName']),
+    "email" => strip_tags($_POST['email']),
+    "level" => strip_tags($_POST['level']),
+    "description" => strip_tags($_POST['description']),
+    "type" => 'Request from an external form'
+  ];
+  $json = json_encode($postArray);
+  $options = [
+    'http' => [
+      'method'  => 'POST',
+      'header'  => 'Content-type: application/json',
+      'content' =>  $json,
+    ],
+  ];
+  $context  = stream_context_create($options);
+  $response = file_get_contents($api_url, false, $context);
+  if($response) {
+    $number = substr($response, 6, 3);
+    $content = "<div class='success'>Форма $number успешно отправлена!<br>Мы обязательно свяжемся с Вами!</div>";
+    echo $content;
+  }
+}
 ?>
 
 <form class="request-form" enctype="multipart/form-data" method="post" id="form" name="form" action="">
@@ -29,6 +60,3 @@
   </div>
   <button type="submit" class="form-button">Send</button>
 </form>
-
-        <div class="success">
-        </div>
