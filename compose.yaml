@@ -29,6 +29,7 @@ services:
     volumes:
       - wordpress:/var/www/html
       - ./:/var/www/html/wp-content/themes/edu-learn
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     depends_on:
       db:
         condition: service_healthy
