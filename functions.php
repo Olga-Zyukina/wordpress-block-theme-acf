@@ -49,13 +49,13 @@ add_action( 'wp_enqueue_scripts', 'edu_learn_enqueue_styles' );
 
 function edu_learn_filter_scripts() {
 	if ( is_page_template ('page-all-courses') ) {
+		$data = array(
+    	'url' => admin_url('admin-ajax.php'),
+    	'nonce' => wp_create_nonce('ajax-nonce')
+		);
+		$js_code = 'const ajax = ' . wp_json_encode($data) . ';';
     wp_enqueue_script( 'courses', get_template_directory_uri() . '/assets/js/courses.js', null, null, true);
-    wp_add_inline_script( 'courses', 'const ajax = ' . json_encode(
-      array(
-        'url' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('ajax-nonce')
-      )
-    ));
+		wp_add_inline_script( 'courses', $js_code, 'before' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'edu_learn_filter_scripts' );

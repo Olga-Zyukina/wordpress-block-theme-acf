@@ -25,6 +25,7 @@ The website synchronizes the submission of requests to the Hollihop CRM using th
 -  PHP
 -  ACF PRO plugin
 -  Icon Block plugin
+-  Docker
 
 ## Live Demo
 
