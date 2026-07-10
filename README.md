@@ -75,5 +75,12 @@ When ACF or ACF PRO is activated, sync the ACF JSON sync files for the following
 Import WordPress pages using the WordPress import tool and the file /data-imoprt-xml/import.xml.
 Set up the menu and select the website logo.
 
+## Docker
+- Building images & run containers
+`docker compose up`<br/>
+- Open browser to install Wordpress: localhost:8080<br/>
+After installing Wordpress, create pages and menus, and specify the front-page.<br/>
+- Open browser to access the database in Adminer: localhost:8081
+
 
 <div><img src="https://github.com/Olga-Zyukina/wordpress-block-theme-acf/blob/master/Frontpage.png" title="wordpress-block-theme-acf" alt="wordpress-block-theme-acf"/></div>
