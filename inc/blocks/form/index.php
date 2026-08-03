@@ -29,10 +29,17 @@ if (!empty($_POST)) {
   ];
   $context  = stream_context_create($options);
   $response = file_get_contents($api_url, false, $context);
+
   if($response) {
     $number = substr($response, 6, 3);
     $content = "<div class='success'>Форма $number успешно отправлена!<br>Мы обязательно свяжемся с Вами!</div>";
     echo $content;
+  }
+
+  // error handling
+  if ( is_wp_error( $response ) ) {
+    $error_message = $response->get_error_message();
+    echo "Что-то пошло не так: $error_message";
   }
 }
 ?>
