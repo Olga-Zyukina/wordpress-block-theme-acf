@@ -14,7 +14,8 @@ $api_url = getenv('HOLLIHOP_URL_STUDY_REQUEST') ?: 'Missing API key';
 if (!empty($_POST)) {
   $postArray = [
     "fullName" => strip_tags($_POST['fullName']),
-    "email" => strip_tags($_POST['email']),
+    // "email" => strip_tags($_POST['email']),
+    "email" => strip_tags('admin@gmail.com'),
     "level" => strip_tags($_POST['level']),
     "description" => strip_tags($_POST['description']),
     "type" => 'Request from an external form'
@@ -50,8 +51,9 @@ if (!empty($_POST)) {
     <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your full name" minlength="2" maxlength="30" required>
   </div>
   <div>
-    <label class="form-label">Email *</label>
-    <input type="email" id="email" name="email" class="form-input" placeholder="Your email" pattern="^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+    <label class="form-label">Email</label>
+    <!-- <input type="email" id="email" name="email" class="form-input" placeholder="Your email" pattern="^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"> -->
+    <input type="email" id="email" name="email" class="form-input" placeholder="Your email" disabled>
   </div>
   <div>
     <label class="form-label">Level</label>
