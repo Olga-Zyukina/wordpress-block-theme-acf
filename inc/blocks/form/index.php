@@ -9,16 +9,16 @@ if ( !defined('ABSPATH')) {
     define('ABSPATH', dirname(__FILE__) . '/');
 }
 require_once(ABSPATH . 'hollihop-data.php');
-$api_url = getenv('HOLLIHOP_URL_STUDY_REQUEST') ?: 'Missing API key';
+$api_url = esc_url( getenv('HOLLIHOP_URL_STUDY_REQUEST') ) ?: 'API URL not found';
 
 if (!empty($_POST)) {
   $postArray = [
-    "fullName" => strip_tags($_POST['fullName']),
-    // "email" => strip_tags($_POST['email']),
-    "email" => strip_tags('admin@gmail.com'),
-    "level" => strip_tags($_POST['level']),
-    "description" => strip_tags($_POST['description']),
-    "type" => 'Request from an external form'
+    "fullName" => sanitize_text_field( $_POST['fullName'] ),
+    // "email" => sanitize_email($_POST['email']),
+    "email" => sanitize_email( 'admin@example.com' ),
+    "level" => esc_html( $_POST['level'] ),
+    "description" => sanitize_textarea_field( $_POST['description'] ),
+    "type" => esc_html( 'Request from an external form' )
   ];
   $json = json_encode($postArray);
   $options = [
@@ -32,14 +32,14 @@ if (!empty($_POST)) {
   $response = file_get_contents($api_url, false, $context);
 
   if($response) {
-    $number = substr($response, 6, 3);
+    $number = substr(esc_html( $response ), 16, 3);
     $content = "<div class='success'>Форма $number успешно отправлена!<br>Мы обязательно свяжемся с Вами!</div>";
     echo $content;
   }
 
   // error handling
   if ( is_wp_error( $response ) ) {
-    $error_message = $response->get_error_message();
+    $error_message = esc_html( $response->get_error_message() );
     echo "Что-то пошло не так: $error_message";
   }
 }

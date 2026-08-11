@@ -93,8 +93,8 @@ if( wp_doing_ajax() ) {
 function get_filter() {
 	if( ! wp_verify_nonce( $_POST['nonce'], 'ajax-nonce' ) ) die();
 
-	$level = $_POST['level'] ?? 'all-levels';
-	$cat = $_POST['cat'] ?? 'all-categories';
+	$level = esc_html( $_POST['level'] ) ?? 'all-levels';
+	$cat = esc_html( $_POST['cat'] ) ?? 'all-categories';
 
 	$courses_posts = get_posts( array(
 		'numberposts' => 9,

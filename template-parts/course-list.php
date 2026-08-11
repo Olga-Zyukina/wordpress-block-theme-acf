@@ -1,7 +1,7 @@
   <?php
   $post = $args['post'] ?? '';
-  $course_level = $args['level'] ?? 'Level';
-  $course_category = $args['category'] ?? 'Category';
+  $course_level = esc_html( $args['level'] ?? 'Level' );
+  $course_category = esc_html( $args['category'] ?? 'Category' );
 	$course_description = esc_html( !empty(get_field( 'course_description', $post )) ? get_field( 'course_description', $post ) : 'Course description' );
 	$сourse_lessons = esc_html( !empty(get_field( 'сourse_lessons', $post )) ? get_field( 'сourse_lessons', $post ) : 'Course lessons' );
 	$course_duration = esc_html( !empty(get_field( 'course_duration', $post )) ? get_field( 'course_duration', $post ) : 'Course duration' );
@@ -17,15 +17,15 @@
       <div class="wp-block-cover__inner-container has-global-padding is-layout-constrained course-taxonomies wp-block-cover-is-layout-constrained">
         <div class="wp-block-group is-content-justification-right is-nowrap is-layout-flex wp-container-core-group-is-layout-level wp-block-group-is-layout-flex">
           <div style="color:#101828;font-size:12px;font-style:normal;font-weight:500;line-height:16px;border-radius:100px;padding-top:5px;padding-bottom:5px;padding-left:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--10)" class="taxonomy-level has-text-align-right has-link-color wp-block-post-terms has-text-color has-heading-color has-background has-background-1-background-color">
-              <?php echo esc_html( $course_level ); ?>
+              <?php echo $course_level; ?>
           </div>
         </div>
         <div class="wp-block-group is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-title wp-block-group-is-layout-flex">
           <div style="font-size:14px;padding-top:0;padding-bottom:0" class="taxonomy-course-category wp-block-post-terms">
-            <?php echo esc_html( $course_category ); ?>
+            <?php echo $course_category; ?>
           </div>
           <h2 style="font-size:clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.67), 20px);font-style:normal;font-weight:700;line-height:1.4;" class="wp-block-post-title">
-            <?php echo esc_html(get_the_title($post)); ?>
+            <?php echo esc_html( get_the_title($post) ); ?>
           </h2>
         </div>
       </div>
